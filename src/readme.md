@@ -1,0 +1,31 @@
+框架介绍
+目录结构
+db
+    -Connection.php
+    -Constructor.php
+    -Model.php
+kernel
+    -CController.php
+    -Dispatcher.php
+    -Route.php
+    -Visitor.php
+vendor
+    -...
+keen.php
+creat.php
+
+访问流程
+一个http请求(Visitor)到达站点后，使用调度器（Dispatcher）创建一个webApp并导入配置。Dispatcher使用了单例模式，所以一个Dispatcher服务一个Visitor，真正的一对一VIP服务。
+1、调度器首先把这个请求实例化成一个Visitor
+2、调度器导入所有的路由（Route）
+3、调度器会问Visitor想要去的目的地，然后更据目的地找出相应的路由
+4、得到路由之后，调度器会根据路由判断途经的地点（middleware），并把Visitor依次放进去
+5、Visitor最终来到目的地
+
+数据库相关
+数据库操作分两种
+    1、使用model（Model），一条数据就是一个model
+    2、使用查询构造器（Constructor）
+webApp里面已经存好了数据库相关的地址
+使用Connection连接数据库，Connection的作用是不用每次都去连接数据库，一个新数据库连上后会存入到Connection::$db_pool中
+后面使用同一个数据库的时候直接到Connection::$db_pool中去取得就好了
