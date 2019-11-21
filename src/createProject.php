@@ -58,7 +58,7 @@ return array(
      * */
     'root' => '../',                  //根目录位置 dirname(__DIR__)
     'routes' => '../routes',          //路由位置
-    'middleware' => '../Middleware',  //中间件位置
+    'middleware' => '../middleware',  //中间件位置
     'widgets' => '../widgets',        //小部件位置
 );
 T
@@ -123,7 +123,7 @@ T
 , 'entrance/html/readme.txt' => <<<T
 静态文件目录
 T
-, 'Middleware/SayHello.php' => <<<T
+, 'middleware/SayHello.php' => <<<T
 <?php
 
 class SayHello {
@@ -134,7 +134,7 @@ class SayHello {
     }
 }
 T
-, 'Middleware/SayBye.php' => <<<T
+, 'middleware/SayBye.php' => <<<T
 <?php
  
 class SayBye {
@@ -214,7 +214,7 @@ $project_path = $argv[1];
 $project_name = $argv[2];
 
 if (is_dir($project_path . DIRECTORY_SEPARATOR . $project_name)) {
-    echo $project_name . ' 已存在，创健失败';
+    echo $project_name . ' 已存在，创建失败';
     exit;
 }
 

@@ -31,13 +31,14 @@ php createProject.php project_path project_name # 第一个参数为项目路径
 ## 项目目录结构
 - App/
     - Demo/Controllers/   # 模块控制器目录
-    - Demo/views/         # 模块视图目录
+    - Demo/views/demo     # 模块视图目录
+    - Demo/views/layouts  # 模块视图布局目录
 - Common/                 # 建议公共方法目录
 - config/                 
     - config.php          # 配置文件
     - database.php        # 数据库配置
 - entrance/               # 建议入口文件目录
-- Middleware/             # 默认中间件目录，可在配置中修改
+- middleware/             # 默认中间件目录，可在配置中修改
 - Models/                 # 建议公共model目录
 - routes/                 # 默认路由目录，可在配置中修改
 - widgets/                # 默认网页部件目录，可在配置中修改
