@@ -1,16 +1,4 @@
 <?php
-/*
-App/Demo/Common
-App/Demo/Controllers
-App/Demo/views
-Common
-config
-entrance
-Middleware
-Models
-routes
-widgets
-*/
 
 $files = array(
     'App/Demo/Common/DemoController.php' => <<<T
@@ -39,9 +27,7 @@ class DefaultController extends DemoController {
 }
 T
 , 'App/Demo/views/default/index.php' => <<<T
-<?php
-
-echo '<h1>index</h1>';
+<?= '<h1>欢迎使用</h1>' ?>
 T
 , 'App/Demo/views/layouts/main.php' => <<<T
 <h1>头<h1>
@@ -58,7 +44,7 @@ use Models\User;
 
 class LoginController extends CController {
     public function login(\$request) {
-        echo '登录验证';
+        \$this->renderWidget('login');
     }
 }
 T
@@ -107,9 +93,32 @@ T
 , 'entrance/index.php' => <<<T
 <?php
 
-require_once __DIR__ . '/../../keen/keen.php';
+require_once __DIR__ . '/../../../src/keen.php';
 \$config = require_once '../config/config.php';
 Dispatcher::createWebApplication(\$config)->run();
+T
+, 'entrance/.htaccess' => <<<T
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controllers...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
 T
 , 'entrance/html/readme.txt' => <<<T
 静态文件目录
@@ -161,19 +170,20 @@ class User extends Model {
 T
 , 'routes/demo.php' => <<<T
 <?php
-Route::any('/')->to('App\Demo\Controllers\DefaultController@index')->middleware(['SayHello', 'SayBye']);
 
+Route::any('/')->to('App\Demo\Controllers\DefaultController@index')->middleware(['SayHello', 'SayBye']);
+Route::any('/login')->to('Common\LoginController@login');
 
 Route::group(['prefix' => '/test', 'middleware' => ['SayHello', 'SayBye']])->add(
     Route::get('t1')->to(function () {
-        return 't2';
-    }),
+        return 't1为get请求';
+    })->middleware(['SayHello', 'SayBye']),
     Route::post('t2')->to(function () {
-        return 't2';
-    })->middleware(['SayHello', 'SayBye'])
+        return 't2为post请求';
+    })
 );
 
-Route::group(['to' => 'App\Admin\Controllers\DefaultController@index'])->add(
+Route::group(['to' => 'App\Demo\Controllers\DefaultController@index'])->add(
     Route::get('/index'),
     Route::get('/index/index')
 );
@@ -189,8 +199,24 @@ T
 T
 );
 
-$project_path = '../test';
-$project_name = 'demo';
+//############################################################
+
+if (empty($argv[1])) {
+    echo '路径不能为空';
+    exit;
+}
+if (empty($argv[2])) {
+    echo '项目名字不能为空';
+    exit;
+}
+
+$project_path = $argv[1];
+$project_name = $argv[2];
+
+if (is_dir($project_path . DIRECTORY_SEPARATOR . $project_name)) {
+    echo $project_name . ' 已存在，创健失败';
+    exit;
+}
 
 foreach ($files as $p => $code) {
     $path = dirname($p);
@@ -207,3 +233,5 @@ foreach ($files as $p => $code) {
         fclose($fp);
     }
 }
+
+echo '创建项目' . $argv[2] . '成功';
