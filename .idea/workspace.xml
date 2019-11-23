@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="610a0107-a9ac-4309-a9e1-b2332561d7eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/createProject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/Constructor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/Constructor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,20 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="165">
-                <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,7 +28,12 @@
       <find>middl</find>
       <find>middleware</find>
       <find>middleware/</find>
+      <find>发</find>
     </findStrings>
+    <dirStrings>
+      <dir>E:\mycode\keen1.0.1\src</dir>
+      <dir>E:\mycode\keen1.0.1</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,6 +56,7 @@
         <option value="$PROJECT_DIR$/test/readme.md" />
         <option value="$PROJECT_DIR$/src/createProject.php" />
         <option value="$PROJECT_DIR$/src/readme.md" />
+        <option value="$PROJECT_DIR$/src/db/Constructor.php" />
       </list>
     </option>
   </component>
@@ -79,7 +72,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -87,20 +79,11 @@
               <item name="keen1.0.1" type="b2602c69:ProjectViewProjectNode" />
               <item name="keen1.0.1" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="keen1.0.1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="keen1.0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="keen1.0.1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="keen1.0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -123,24 +106,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.test.php (1)">
-    <configuration name="createProject.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/createProject.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="test.php (1)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/test.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="test.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/test.php">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHP Script.test.php (1)" />
-        <item itemvalue="PHP Script.createProject.php" />
-        <item itemvalue="PHP Script.test.php" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -154,17 +119,18 @@
       <workItem from="1574246012660" duration="7440000" />
       <workItem from="1574316426198" duration="3598000" />
       <workItem from="1574320728141" duration="10638000" />
-      <workItem from="1574336439423" duration="559000" />
+      <workItem from="1574336439423" duration="1277000" />
+      <workItem from="1574490264657" duration="1611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22235000" />
+    <option name="totallyTimeSpent" value="24564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1444563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -177,7 +143,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -219,12 +185,10 @@
     <entry file="file://$PROJECT_DIR$/test/t3/entrance/index.html" />
     <entry file="file://$PROJECT_DIR$/test/t3/App/Demo/Common/DemoController.php" />
     <entry file="file://$PROJECT_DIR$/test/t3/App/Demo/Controllers/DefaultController.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/config/database.php" />
     <entry file="file://$PROJECT_DIR$/test/t3/entrance/.htaccess" />
     <entry file="file://$PROJECT_DIR$/test/t3/Common/LoginController.php" />
     <entry file="file://$PROJECT_DIR$/test/t3/entrance/index.php" />
     <entry file="file://$PROJECT_DIR$/test.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/config/config.php" />
     <entry file="file://$PROJECT_DIR$/src/kernel/Route.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -232,7 +196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/routes/demo.php" />
     <entry file="file://$PROJECT_DIR$/src/kernel/CController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -242,22 +205,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/t3/App/Demo/views/default/index.php" />
     <entry file="file://$PROJECT_DIR$/test/t3/App/Demo/views/layouts/main.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/Models/User.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/widgets/login.php" />
     <entry file="file://$PROJECT_DIR$/test/t3/entrance/html/readme.txt" />
-    <entry file="file://$PROJECT_DIR$/src/db/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="163" column="39" selection-start-line="163" selection-start-column="34" selection-end-line="163" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/Constructor.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/Connection.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -265,13 +213,6 @@
             <caret column="4" selection-start-column="4" selection-end-column="4" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/keen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -283,18 +224,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/t3/config/database.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/t3/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/t3/middleware/SayBye.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test/t3/middleware/SayHello.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/createProject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="216" column="33" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="33" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/test/t3/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/t3/routes/demo.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/t3/widgets/login.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test/t3/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -304,11 +257,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/Constructor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1042">
+          <caret line="163" column="39" selection-start-line="163" selection-start-column="34" selection-end-line="163" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/createProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4752">
+          <caret line="216" column="33" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/keen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="165">
-            <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="-2847">
+            <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
           </first_editor>
           <second_editor />
         </state>

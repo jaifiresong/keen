@@ -8,7 +8,7 @@
 - kernel/
     - ArrayForm.php    # 请求的表单将会是ArrayForm的实例
     - CController.php  # 主控制器，提供render方法
-    - Dispatcher.php   # 调度器，请求调度器来调度
+    - Dispatcher.php   # 调度器，由调度器来分配请求该何去何从
     - Route.php        # 路由管理类，所有的路由都存在这个类里面，由调度器来取
     - Visitor.php      # 访客会成为这个类的实例，提url解析和登录登出方法
 

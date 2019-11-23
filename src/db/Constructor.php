@@ -10,7 +10,7 @@ class Constructor extends Connection {
     private $orderStr;
     private $limitStr;
     private $sqlStr;  //如果不为null就直接执行这条sql
-    private $params = array();  //用于SQL安全过滤
+    private $params = array();  //预处理参数
 
     private function __construct() {
 
