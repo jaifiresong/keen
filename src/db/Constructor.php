@@ -79,16 +79,19 @@ class Constructor extends Connection {
 
     public function query() {
         $result = $this->query_exec();
+        $result->setFetchMode(PDO::FETCH_ASSOC);
         return $result->rowCount();
     }
 
     public function queryRow() {
         $result = $this->query_exec();
+        $result->setFetchMode(PDO::FETCH_ASSOC);
         return $result->fetch();
     }
 
     public function queryAll() {
         $result = $this->query_exec();
+        $result->setFetchMode(PDO::FETCH_ASSOC);
         $data = array();
         while ($row = $result->fetch()) {
             $data[] = $row;
