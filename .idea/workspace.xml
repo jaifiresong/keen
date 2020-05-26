@@ -3,16 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="610a0107-a9ac-4309-a9e1-b2332561d7eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/Constructor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/Constructor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/CController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/CController.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf />
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,6 +29,8 @@
       <find>发</find>
       <find>6itu0gjP3xQZ6xFEHoGHFoGJyvUYVF</find>
       <find>setFetchMode</find>
+      <find>CController</find>
+      <find>controller</find>
     </findStrings>
     <dirStrings>
       <dir>E:\mycode\keen1.0.1\src</dir>
@@ -39,28 +40,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/test/demo/entrance/index.php" />
-        <option value="$PROJECT_DIR$/test/demo/routes/demo.php" />
-        <option value="$PROJECT_DIR$/src/test.php" />
-        <option value="$PROJECT_DIR$/test/demo/Models/User.php" />
-        <option value="$PROJECT_DIR$/test/t2/entrance/index.php" />
-        <option value="$PROJECT_DIR$/test/t3/entrance/index.html" />
-        <option value="$PROJECT_DIR$/test/t3/App/Demo/views/default/index.php" />
-        <option value="$PROJECT_DIR$/test/t3/routes/demo.php" />
-        <option value="$PROJECT_DIR$/test/t3/widgets/login.php" />
-        <option value="$PROJECT_DIR$/test/t3/Common/LoginController.php" />
-        <option value="$PROJECT_DIR$/src/keen.php" />
-        <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/test/readme.md" />
-        <option value="$PROJECT_DIR$/src/createProject.php" />
-        <option value="$PROJECT_DIR$/src/readme.md" />
-        <option value="$PROJECT_DIR$/src/db/Constructor.php" />
-      </list>
-    </option>
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
@@ -68,44 +47,20 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="keen1.0.1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="keen1.0.1" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1bsjfccszM0UOO82FeHBxtzLQBp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,186 +80,25 @@
       <workItem from="1576551374811" duration="14000" />
       <workItem from="1577756542758" duration="364000" />
       <workItem from="1578466532505" duration="190000" />
+      <workItem from="1588241143855" duration="1093000" />
+      <workItem from="1589254321944" duration="68000" />
+      <workItem from="1589254623040" duration="17000" />
+      <workItem from="1589427800948" duration="1002000" />
+      <workItem from="1590459334842" duration="764000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25132000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/App/Demo/Common/DemoController.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/App/Demo/Controllers/DefaultController.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/App/Demo/views/default/index.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/App/Demo/views/layouts/main.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/Middleware/SayBye.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/Middleware/SayHello.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/routes/demo.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/widgets/login.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/readme.md" />
-    <entry file="file://$PROJECT_DIR$/test/demo/Common/LoginController.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/config/config.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/config/database.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/entrance/html/readme.txt" />
-    <entry file="file://$PROJECT_DIR$/test/demo/entrance/index.php" />
-    <entry file="file://$PROJECT_DIR$/test/demo/Models/User.php" />
-    <entry file="file://$PROJECT_DIR$/src/vendor/shell/room.php" />
-    <entry file="file://$PROJECT_DIR$/src/vendor/shell/index.php" />
-    <entry file="file://$PROJECT_DIR$/src/vendor/shell/hbQRcode.php" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t2/entrance/index.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/entrance/index.html" />
-    <entry file="file://$PROJECT_DIR$/test/t3/App/Demo/Common/DemoController.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/App/Demo/Controllers/DefaultController.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/entrance/.htaccess" />
-    <entry file="file://$PROJECT_DIR$/test/t3/Common/LoginController.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/entrance/index.php" />
-    <entry file="file://$PROJECT_DIR$/test.php" />
-    <entry file="file://$PROJECT_DIR$/src/kernel/Route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/CController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="59" column="35" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/App/Demo/views/default/index.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/App/Demo/views/layouts/main.php" />
-    <entry file="file://$PROJECT_DIR$/test/t3/entrance/html/readme.txt" />
-    <entry file="file://$PROJECT_DIR$/test/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="4" selection-start-column="4" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/config/database.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/middleware/SayBye.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/middleware/SayHello.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/routes/demo.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/widgets/login.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/t3/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/keen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/createProject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="852">
-          <caret line="216" column="33" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="22">
-            <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/Constructor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="171" column="8" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="558" y="84" key="CommitChangelistDialog2" timestamp="1589428801369">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="558" y="84" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589428801369" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589428779737">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589428779737" />
   </component>
 </project>
