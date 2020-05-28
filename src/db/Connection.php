@@ -1,12 +1,14 @@
 <?php
 
 
-class Connection {
+class Connection
+{
     private static $db_pool = array();
     protected $db;
     public $conf = 'mysql'; //默认数据库名
 
-    public function connect() {
+    public function connect()
+    {
         $this->db = empty(self::$db_pool[$this->conf]) ? null : self::$db_pool[$this->conf];
         if (empty($this->db)) {
             $connConf = Dispatcher::$config['database'][$this->conf];

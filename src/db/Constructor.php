@@ -1,7 +1,8 @@
 <?php
 
 
-class Constructor extends Connection {
+class Constructor extends Connection
+{
     private $selectStr;
     private $fromStr;
     private $leftJoinStr;
@@ -12,11 +13,13 @@ class Constructor extends Connection {
     private $sqlStr;  //如果不为null就直接执行这条sql
     private $params = array();  //预处理参数
 
-    private function __construct() {
+    private function __construct()
+    {
 
     }
 
-    public static function connection($conf = null) {
+    public static function connection($conf = null)
+    {
         $constructor = new self();
         if ($conf) {
             $constructor->conf = $conf;
@@ -25,7 +28,8 @@ class Constructor extends Connection {
         return $constructor;
     }
 
-    public function createCommand($sqlStr = null, $params = array()) {
+    public function createCommand($sqlStr = null, $params = array())
+    {
         if ($sqlStr) {
             $this->sqlStr = $sqlStr;
         }
@@ -33,7 +37,8 @@ class Constructor extends Connection {
         return $this;
     }
 
-    public function where($str, $params = array()) {
+    public function where($str, $params = array())
+    {
         if (!empty($str)) {
             $this->whereStr = "WHERE $str ";
         }
@@ -41,55 +46,64 @@ class Constructor extends Connection {
         return $this;
     }
 
-    public function select($str = '*') {
+    public function select($str = '*')
+    {
         $this->selectStr = "SELECT $str ";
         return $this;
     }
 
-    public function from($str) {
+    public function from($str)
+    {
         $this->fromStr = "FROM $str ";
         return $this;
     }
 
-    public function leftJoin($str, $on) {
+    public function leftJoin($str, $on)
+    {
         $this->leftJoinStr .= "LEFT JOIN $str ON $on ";
         return $this;
     }
 
-    public function group($str) {
+    public function group($str)
+    {
         if (!empty($str)) {
             $this->groupStr = "GROUP BY $str ";
         }
         return $this;
     }
 
-    public function order($str) {
+    public function order($str)
+    {
         if (!empty($str)) {
             $this->orderStr = "ORDER BY $str ";
         }
         return $this;
     }
 
-    public function limit($offset, $start = 0) {
+    public function limit($offset, $start = 0)
+    {
         if ($offset) {
             $this->limitStr = "LIMIT $start,$offset ";
         }
         return $this;
     }
 
-    public function query() {
+    public function query()
+    {
         $result = $this->query_exec();
         $result->setFetchMode(PDO::FETCH_ASSOC);
         return $result->rowCount();
     }
 
-    public function queryRow() {
+    public function queryRow()
+    {
         $result = $this->query_exec();
         $result->setFetchMode(PDO::FETCH_ASSOC);
         return $result->fetch();
     }
 
-    public function queryAll() {
+    public function queryAll()
+    {
         $result = $this->query_exec();
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $data = array();
@@ -103,7 +117,8 @@ class Constructor extends Connection {
      * 该方法预处理方式执行
      * @return object PDOStatement对象
      */
-    private function query_exec() {
+    private function query_exec()
+    {
         $sqlStr = $this->createSqlStr();
         $prepare = $this->db->prepare($sqlStr);
         foreach ($this->params as $field => $value) {
@@ -117,7 +132,8 @@ class Constructor extends Connection {
         return $prepare;
     }
 
-    private function createSqlStr() {
+    private function createSqlStr()
+    {
         if ($this->sqlStr) {
             return $this->sqlStr;
         }

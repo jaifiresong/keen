@@ -1,14 +1,16 @@
 <?php
 
 
-abstract class Model extends Connection implements ArrayAccess {
+abstract class Model extends Connection implements ArrayAccess
+{
 
     public $tableName;
     private $data;    //每条数据都是一个对象，具体键值放在data里面
     private $PK;      //表主键
     public $pagingName = 'page';  // 分布变量名称
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->connect();
         $this->tableName = $this->tableName();
         //查询主键
@@ -38,29 +40,35 @@ abstract class Model extends Connection implements ArrayAccess {
 
     /* 下面两个方法用来存取对象属性 */
 
-    public function __get($offset) {
+    public function __get($offset)
+    {
         return $this->offsetExists($offset) ? $this->data[$offset] : null;
     }
 
-    public function __set($offset, $value) {
+    public function __set($offset, $value)
+    {
         $this->data[$offset] = $value;
     }
 
     /* 下面4个方法是必须实现的ArrayAccess接口 */
 
-    public function offsetGet($offset) {
+    public function offsetGet($offset)
+    {
         return $this->offsetExists($offset) ? $this->data[$offset] : null;
     }
 
-    public function offsetSet($offset, $value) {
+    public function offsetSet($offset, $value)
+    {
         $this->data[$offset] = $value;
     }
 
-    public function offsetExists($offset) {
+    public function offsetExists($offset)
+    {
         return isset($this->data[$offset]);
     }
 
-    public function offsetUnset($offset) {
+    public function offsetUnset($offset)
+    {
         if ($this->offsetExists($offset)) {
             unset($this->data[$offset]);
         }
@@ -72,7 +80,8 @@ abstract class Model extends Connection implements ArrayAccess {
      * @param array $params example array(':id'=>'1')
      * @return object PDOStatement对象
      */
-    private function query_exec($sqlStr, $params) {
+    private function query_exec($sqlStr, $params)
+    {
         $prepare = $this->db->prepare($sqlStr);
         foreach ($params as $field => $value) {
             $prepare->bindParam($field, $value);
@@ -81,7 +90,8 @@ abstract class Model extends Connection implements ArrayAccess {
         return $prepare;
     }
 
-    public function paging($name) {
+    public function paging($name)
+    {
         $this->pagingName = $name;
         return $this;
     }
@@ -95,7 +105,8 @@ abstract class Model extends Connection implements ArrayAccess {
      * @param $params
      * @return array
      */
-    public function paginate($pageSize = 10, $condition = '1', $params = array()) {
+    public function paginate($pageSize = 10, $condition = '1', $params = array())
+    {
         if (is_array($condition)) {
             $where_str = $condition['condition'];
         } else {
@@ -120,7 +131,8 @@ abstract class Model extends Connection implements ArrayAccess {
         return array('data' => $data, 'paging' => $paging);
     }
 
-    public function findByPk($pk) {
+    public function findByPk($pk)
+    {
         if (!empty($this->PK)) {
             $data = $this->find("{$this->PK} = $pk");
             //$r = new ArrayObject($data, ArrayObject::ARRAY_AS_PROPS);  //生成一个能用对象又能用数组方式访问的数据
@@ -129,7 +141,8 @@ abstract class Model extends Connection implements ArrayAccess {
         return null;
     }
 
-    public function find($condition = '1', $params = array()) {
+    public function find($condition = '1', $params = array())
+    {
         $data = $this->findAll($condition, $params);
         if (empty($data)) {
             return null;
@@ -143,7 +156,8 @@ abstract class Model extends Connection implements ArrayAccess {
      * @param array $params 预处理参数
      * @return array
      */
-    public function findAll($condition = '1', $params = array()) {
+    public function findAll($condition = '1', $params = array())
+    {
         $sqlStr = 'SELECT * FROM ' . $this->tableName . ' WHERE ';
         if (is_array($condition)) {
             if (isset($condition['field'])) {
@@ -179,14 +193,16 @@ abstract class Model extends Connection implements ArrayAccess {
         return $data;
     }
 
-    public function count($condition = '1', $params = array()) {
+    public function count($condition = '1', $params = array())
+    {
         $sqlStr = "SELECT count(*) as num FROM {$this->tableName} WHERE $condition";
         $result = $this->query_exec($sqlStr, $params);
         $data = $result->fetch();
         return $data['num'];
     }
 
-    public function update($data, $condition, $params = array()) {
+    public function update($data, $condition, $params = array())
+    {
         $set = '';
         foreach ($data as $field => $value) {
             if (null === $value) {
@@ -201,7 +217,8 @@ abstract class Model extends Connection implements ArrayAccess {
         return $result->rowCount();
     }
 
-    public function delete($condition, $params = array()) {
+    public function delete($condition, $params = array())
+    {
         $sqlStr = "DELETE FROM {$this->tableName} WHERE $condition";
         $result = $this->query_exec($sqlStr, $params);
         return $result->rowCount();
@@ -210,7 +227,8 @@ abstract class Model extends Connection implements ArrayAccess {
     /**
      * 增加或修改
      */
-    public function save() {
+    public function save()
+    {
         list($set, $data_field, $data_value) = array('', '', '');
         foreach ($this->data as $field => $value) {
             $data_field .= "$field,";
