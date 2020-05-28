@@ -1,7 +1,8 @@
 <?php
 
 
-class Visitor {
+class Visitor
+{
     //session name
     const VAR_USER_SESSION_NAME = 'session57f417b438b12da673e661e998e5bb92';
     //REQUEST_METHOD: "GET",
@@ -34,7 +35,8 @@ class Visitor {
     //###########↓登录信息↓###########
     private $_id; //注意不能用empty函数来判断
 
-    public function __construct() {
+    public function __construct()
+    {
         // visitor info
         $this->method = $_SERVER['REQUEST_METHOD'];
         $this->domain = $_SERVER['HTTP_HOST'];
@@ -66,7 +68,8 @@ class Visitor {
      * @param string $attribute # 属性名称
      * @return object
      */
-    public function __get($attribute) {
+    public function __get($attribute)
+    {
         if ('id' == $attribute) {
             return $this->_id;
         }
@@ -79,7 +82,8 @@ class Visitor {
      * @param string $attribute
      * @param string $value
      */
-    public function __set($attribute, $value) {
+    public function __set($attribute, $value)
+    {
         //代码追踪调试
         //$backtrace = debug_backtrace();
         //var_dump($backtrace);
@@ -90,17 +94,20 @@ class Visitor {
         }
     }
 
-    public function login($user_id) {
+    public function login($user_id)
+    {
         //session是可以存数组的
         $_SESSION[Visitor::VAR_USER_SESSION_NAME] = $user_id;
         $this->_id = $user_id;
     }
 
-    public function logout() {
+    public function logout()
+    {
         $_SESSION[Visitor::VAR_USER_SESSION_NAME] = null;
     }
 
-    public function isAjaxRequest() {
+    public function isAjaxRequest()
+    {
         if (isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"]) == "xmlhttprequest") {
             return true;
         } else {
@@ -111,7 +118,8 @@ class Visitor {
     /**
      * 路由地址
      */
-    public function where() {
+    public function where()
+    {
         /*
          * "/index.php"
          * "/1/2/3/4/5?a=1&b=2&c=3"
@@ -127,7 +135,8 @@ class Visitor {
      * uri:标识符 不可重复，像身份证编号一样
      * url:定位符 可重复，像名字一样
      */
-    public function base_uri() {
+    public function base_uri()
+    {
         $path = trim(dirname($this->php_self), '/');
         $path = trim($path, '\\');
         return $path;
@@ -138,7 +147,8 @@ class Visitor {
      * @param array $params
      * @return string
      */
-    public function getUrl($params = array()) {
+    public function getUrl($params = array())
+    {
         if ($params) {
             return '/' . trim($this->where(), '/') . '?' . http_build_query($params);
         }
@@ -148,7 +158,8 @@ class Visitor {
     /**
      * 完整URL
      */
-    public function fullUrl() {
+    public function fullUrl()
+    {
         return $this->scheme . '://' . $this->domain . $this->uri;
     }
 

@@ -8,7 +8,6 @@ class CController
     public $action;
     public $layout = 'layouts/main';
 
-
     protected function fix_template_path($template)
     {
         return sprintf('%s/%s/views/%s/%s', Dispatcher::$config['root'], $this->module, $this->controller, $template);

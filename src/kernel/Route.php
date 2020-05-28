@@ -1,6 +1,7 @@
 <?php
 
-class Route {
+class Route
+{
     // string 分组路由前缀，如果前缀是null那么注册路由时直接加到$lines里，反之
     public static $prefix;
     // array 分组路由的中间件
@@ -18,7 +19,8 @@ class Route {
     // string 路由方式
     public $method;
 
-    public static function group($config = array('prefix' => '/', 'middleware' => [], 'to' => null)) {
+    public static function group($config = array('prefix' => '/', 'middleware' => [], 'to' => null))
+    {
         if (!empty($config['prefix'])) {
             self::$prefix = trim($config['prefix'], '/');
         }
@@ -31,7 +33,8 @@ class Route {
         return new self();
     }
 
-    public static function add() {
+    public static function add()
+    {
         $items = func_get_args();
         foreach ($items as $item) {
             $index = trim(self::$prefix . '/' . $item->index, '/');
@@ -53,7 +56,8 @@ class Route {
         self::$group_target = null;
     }
 
-    public static function get($uri) {
+    public static function get($uri)
+    {
         $index = trim($uri, '/');
         $index = empty($index) ? '/' : $index;
         $route = new self();
@@ -65,7 +69,8 @@ class Route {
         return $route;
     }
 
-    public static function post($uri) {
+    public static function post($uri)
+    {
         $index = trim($uri, '/');
         $index = empty($index) ? '/' : $index;
         $route = new self();
@@ -77,7 +82,8 @@ class Route {
         return $route;
     }
 
-    public static function any($uri) {
+    public static function any($uri)
+    {
         $index = trim($uri, '/');
         $index = empty($index) ? '/' : $index;
         $route = new self();
@@ -95,7 +101,8 @@ class Route {
      * @param array $pathway
      * @return object
      */
-    public function middleware($pathway) {
+    public function middleware($pathway)
+    {
         $this->middleware = array_merge($this->middleware, $pathway);
         return $this;
     }
@@ -105,7 +112,8 @@ class Route {
      * @param null $target
      * @return object
      */
-    public function to($target) {
+    public function to($target)
+    {
         $this->target = $target;
         return $this;
     }

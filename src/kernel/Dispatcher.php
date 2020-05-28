@@ -3,16 +3,19 @@
 spl_autoload_register(array('Dispatcher', 'autoloadApp'));
 
 
-class Dispatcher {
+class Dispatcher
+{
     public $visitor;
     public static $config;
     public static $app;
 
-    private function __construct() {
+    private function __construct()
+    {
         $this->visitor = new Visitor();
     }
 
-    public static function createWebApplication($config) {
+    public static function createWebApplication($config)
+    {
         if (self::$app instanceof self) {
             return self::$app;
         }
@@ -33,7 +36,8 @@ class Dispatcher {
         return self::$app;
     }
 
-    public static function autoloadApp($app_name) {
+    public static function autoloadApp($app_name)
+    {
         require_once self::$config['root'] . DIRECTORY_SEPARATOR . str_replace('\\', '/', trim($app_name, '\\')) . '.php';
     }
 
@@ -42,7 +46,8 @@ class Dispatcher {
      * @param $controller
      * @param $action
      */
-    private function arrive($controller, $action) {
+    private function arrive($controller, $action)
+    {
         $app_path = str_replace('\\', '/', trim($controller, '\\'));
         require_once self::$config['root'] . DIRECTORY_SEPARATOR . $app_path . '.php';
         $handle = new $controller($this->visitor);
@@ -57,7 +62,8 @@ class Dispatcher {
      * 1、调度器首先问请求去哪
      * 2、调度器知道请求去哪后，判断目的地会经过哪些地方，依次把请求放进去
      */
-    public function run() {
+    public function run()
+    {
         $uri = $this->visitor->where();
         $method = $this->visitor->method;
         //foreach (Route::$lines as $k => $v) {
