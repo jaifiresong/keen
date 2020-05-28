@@ -8,6 +8,11 @@ if (!function_exists('echo_json')) {
     }
 }
 
+if (defined('DEBUG') && DEBUG) {
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+}
+
 function classLoader($class)
 {
     $path = str_replace('\\', DIRECTORY_SEPARATOR, $class);
