@@ -90,21 +90,21 @@ class Constructor extends Connection
 
     public function query()
     {
-        $result = $this->query_exec();
+        $result = $this->query_prep();
         $result->setFetchMode(PDO::FETCH_ASSOC);
-        return $result->rowCount();
+        return $result;
     }
 
     public function queryRow()
     {
-        $result = $this->query_exec();
+        $result = $this->query_prep();
         $result->setFetchMode(PDO::FETCH_ASSOC);
         return $result->fetch();
     }
 
     public function queryAll()
     {
-        $result = $this->query_exec();
+        $result = $this->query_prep();
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $data = array();
         while ($row = $result->fetch()) {
@@ -117,17 +117,17 @@ class Constructor extends Connection
      * 该方法预处理方式执行
      * @return object PDOStatement对象
      */
-    private function query_exec()
+    private function query_prep()
     {
-        $sqlStr = $this->createSqlStr();
-        $prepare = $this->db->prepare($sqlStr);
+        $sql_str = $this->createSqlStr();
+        $prepare = $this->db->prepare($sql_str);
         foreach ($this->params as $field => $value) {
             $prepare->bindParam($field, $value);
         }
         try {
             $prepare->execute();
         } catch (Exception $e) {
-            die("Error : " . $e->getMessage() . ' the sql was : ' . $sqlStr);
+            die("Error : " . $e->getMessage() . ' the sql was : ' . $sql_str);
         }
         return $prepare;
     }
