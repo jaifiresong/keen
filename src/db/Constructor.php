@@ -90,24 +90,26 @@ class Constructor extends Connection
 
     public function query()
     {
-        $result = $this->query_prep();
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        return $result;
+        $prep = $this->query_prep();
+        $prep->setFetchMode(PDO::FETCH_ASSOC);
+        //var_dump($result->rowCount()); //影响的行数
+        //var_dump($this->db->lastInsertId());//新增ID
+        return array('rowCount' => $prep->rowCount(), 'lastInsertId' => (int)$this->db->lastInsertId());
     }
 
     public function queryRow()
     {
-        $result = $this->query_prep();
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        return $result->fetch();
+        $prep = $this->query_prep();
+        $prep->setFetchMode(PDO::FETCH_ASSOC);
+        return $prep->fetch();
     }
 
     public function queryAll()
     {
-        $result = $this->query_prep();
-        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $prep = $this->query_prep();
+        $prep->setFetchMode(PDO::FETCH_ASSOC);
         $data = array();
-        while ($row = $result->fetch()) {
+        while ($row = $prep->fetch()) {
             $data[] = $row;
         }
         return $data;
