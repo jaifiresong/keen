@@ -1,13 +1,15 @@
 <?php
 
 if (!function_exists('echo_json')) {
-    function echo_json($data) {
+    function echo_json($data)
+    {
         echo json_encode($data);
         exit;
     }
 }
 
-function classLoader($class) {
+function classLoader($class)
+{
     $path = str_replace('\\', DIRECTORY_SEPARATOR, $class);
     $kernel_path = __DIR__ . DIRECTORY_SEPARATOR . 'kernel' . DIRECTORY_SEPARATOR . $path . '.php';
     if (file_exists($kernel_path)) {
