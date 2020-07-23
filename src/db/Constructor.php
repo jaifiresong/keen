@@ -92,7 +92,7 @@ class Constructor extends Connection
     {
         $prep = $this->query_prep();
         $prep->setFetchMode(PDO::FETCH_ASSOC);
-        //var_dump($result->rowCount()); //影响的行数
+        //var_dump($prep->rowCount()); //影响的行数
         //var_dump($this->db->lastInsertId());//新增ID
         return array('rowCount' => $prep->rowCount(), 'lastInsertId' => (int)$this->db->lastInsertId());
     }
@@ -124,7 +124,8 @@ class Constructor extends Connection
         $sql_str = $this->createSqlStr();
         $prepare = $this->db->prepare($sql_str);
         foreach ($this->params as $field => $value) {
-            $prepare->bindParam($field, $value);
+            //$prepare->bindParam($field, $value);//地址绑定
+            $prepare->bindValue($field, $value);//值绑定
         }
         try {
             $prepare->execute();
