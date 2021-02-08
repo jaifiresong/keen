@@ -7,7 +7,7 @@ abstract class Model extends Connection implements ArrayAccess
     public $tableName;
     private $data;    //每条数据都是一个对象，具体键值放在data里面
     private $PK;      //表主键
-    public $pagingName = 'page';  // 分布变量名称
+    public $pagingName = 'page';  // 分页变量名称
 
     public function __construct()
     {
